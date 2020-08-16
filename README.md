@@ -4,7 +4,7 @@ New type of
 
 Please install  robot-framework.
 
- `java -version`
+ `pip install robotframework`
 
 How to run current tests:
 
