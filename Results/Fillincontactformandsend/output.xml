@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200816 14:08:35.866" rpa="false">
+<suite id="s1" name="Fillincontactformandsend" source="C:\robot-frame\scripts\Tests\Tests\Fillincontactformandsend.robot">
+<test id="s1-t1" name="Fill in the contact form and send it">
+<kw name="Given Open Browser To Login Page for trivago" library="Trivago">
+<kw name="Load Page Trivago" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://room5.trivago.com/</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200816 14:08:36.172" level="INFO">Opening browser 'Chrome' to base url 'http://room5.trivago.com/'.</msg>
+<status status="PASS" starttime="20200816 14:08:36.172" endtime="20200816 14:08:41.768"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20200816 14:08:41.768" endtime="20200816 14:08:41.769"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200816 14:08:41.769" endtime="20200816 14:08:44.915"></status>
+</kw>
+<kw name="Trivago Page Should Be Open" library="Trivago">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>trivago Magazine</arg>
+</arguments>
+<msg timestamp="20200816 14:08:45.923" level="INFO">Page title is 'trivago Magazine'.</msg>
+<status status="PASS" starttime="20200816 14:08:44.915" endtime="20200816 14:08:45.923"></status>
+</kw>
+<status status="PASS" starttime="20200816 14:08:44.915" endtime="20200816 14:08:45.923"></status>
+</kw>
+<status status="PASS" starttime="20200816 14:08:36.171" endtime="20200816 14:08:45.923"></status>
+</kw>
+<status status="PASS" starttime="20200816 14:08:36.171" endtime="20200816 14:08:45.923"></status>
+</kw>
+<kw name="When Go to Contact form" library="Trivago">
+<kw name="Go to Contact forma" library="Footer">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.document.evaluate("//a[text()='Contact']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView(true);</arg>
+</arguments>
+<msg timestamp="20200816 14:08:45.926" level="INFO">Executing JavaScript:
+window.document.evaluate("//a[text()='Contact']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView(true);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200816 14:08:45.925" endtime="20200816 14:08:46.936"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[text()='Contact']</arg>
+</arguments>
+<msg timestamp="20200816 14:08:46.936" level="INFO">Clicking element 'xpath=//a[text()='Contact']'.</msg>
+<status status="PASS" starttime="20200816 14:08:46.936" endtime="20200816 14:08:49.157"></status>
+</kw>
+<status status="PASS" starttime="20200816 14:08:45.924" endtime="20200816 14:08:49.157"></status>
+</kw>
+<status status="PASS" starttime="20200816 14:08:45.924" endtime="20200816 14:08:49.158"></status>
+</kw>
+<kw name="When Fill In contact form" library="Trivago">
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>DEPRECATED in SeleniumLibrary 4.0. , use `Switch Window` instead.</doc>
+<arguments>
+<arg>new</arg>
+</arguments>
+<status status="PASS" starttime="20200816 14:08:49.208" endtime="20200816 14:08:53.239"></status>
+</kw>
+<kw name="Fill In contact forma" library="Contact Form">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>css=textarea.contact-msg</arg>
+<arg>a a a</arg>
+</arguments>
+<msg timestamp="20200816 14:08:53.241" level="INFO">Sending key(s) ('a a a',) to css=textarea.contact-msg element.</msg>
+<msg timestamp="20200816 14:08:57.580" level="INFO">Sending keys a a a</msg>
+<status status="PASS" starttime="20200816 14:08:53.240" endtime="20200816 14:08:58.650"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>xpath=//*[@id="app"]/div[3]/div/div/div[1]/div[3]/div[1]/input</arg>
+<arg>tt kk</arg>
+</arguments>
+<msg timestamp="20200816 14:08:58.651" level="INFO">Sending key(s) ('tt kk',) to xpath=//*[@id="app"]/div[3]/div/div/div[1]/div[3]/div[1]/input element.</msg>
+<msg timestamp="20200816 14:09:00.968" level="INFO">Sending keys tt kk</msg>
+<status status="PASS" starttime="20200816 14:08:58.650" endtime="20200816 14:09:02.018"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>css=#contact-email</arg>
+<arg>1.2@ma.com</arg>
+</arguments>
+<msg timestamp="20200816 14:09:02.018" level="INFO">Sending key(s) ('1.2@ma.com',) to css=#contact-email element.</msg>
+<msg timestamp="20200816 14:09:04.476" level="INFO">Sending keys 1.2@ma.com</msg>
+<status status="PASS" starttime="20200816 14:09:02.018" endtime="20200816 14:09:05.597"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#confirm</arg>
+</arguments>
+<msg timestamp="20200816 14:09:05.599" level="INFO">Clicking element 'css=#confirm'.</msg>
+<status status="PASS" starttime="20200816 14:09:05.598" endtime="20200816 14:09:07.712"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//button[@class='contact-submit']</arg>
+</arguments>
+<msg timestamp="20200816 14:09:07.712" level="INFO">Clicking element 'xpath=//button[@class='contact-submit']'.</msg>
+<status status="PASS" starttime="20200816 14:09:07.712" endtime="20200816 14:09:09.796"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.document.evaluate("//button[@class='contact-submit']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView(true);</arg>
+</arguments>
+<msg timestamp="20200816 14:09:09.797" level="INFO">Executing JavaScript:
+window.document.evaluate("//button[@class='contact-submit']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView(true);
+Without any arguments.</msg>
+<status status="PASS" starttime="20200816 14:09:09.796" endtime="20200816 14:09:10.811"></status>
+</kw>
+<status status="PASS" starttime="20200816 14:08:53.239" endtime="20200816 14:09:10.812"></status>
+</kw>
+<status status="PASS" starttime="20200816 14:08:49.205" endtime="20200816 14:09:10.812"></status>
+</kw>
+<kw name="Then Make sure, that form is sent" library="Trivago">
+<kw name="Successful message" library="Contact Form">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>//*[@id="app"]/div[3]/div/div/div[1]/div/p</arg>
+<arg>Message Sent Successfully</arg>
+</arguments>
+<status status="PASS" starttime="20200816 14:09:10.816" endtime="20200816 14:09:12.925"></status>
+</kw>
+<status status="PASS" starttime="20200816 14:09:10.815" endtime="20200816 14:09:12.925"></status>
+</kw>
+<status status="PASS" starttime="20200816 14:09:10.814" endtime="20200816 14:09:12.926"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200816 14:09:12.927" endtime="20200816 14:09:16.076"></status>
+</kw>
+<status status="PASS" starttime="20200816 14:08:36.170" endtime="20200816 14:09:16.076" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200816 14:08:35.869" endtime="20200816 14:09:16.078"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Fillincontactformandsend">Fillincontactformandsend</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
